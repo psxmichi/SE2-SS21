@@ -1,35 +1,32 @@
 package uebung2;
 
 // import java.sql.Date;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
-public class User {
-    private int id;
-    private LocalDate dateOfBirth;
-    private String email;
+public class User implements UserDTO {
+    private int userid;
     private String firstName;
     private String lastName;
-    private String occupation;
+    private String email;
     private String password;
-    private String phone;
-    private String userid;
 
-    public int getId() {
-        return id;
+    public User() {
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    public User(int userid, String firstName, String lastName, String email, String password) {
+        this.userid = userid;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
+        this.password = password;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getFirstName() {
@@ -48,6 +45,14 @@ public class User {
         this.lastName = lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -56,20 +61,12 @@ public class User {
         this.password = password;
     }
 
-    public String getUserid() {
-        return userid;
-    }
-
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
+        return userid == user.userid &&
                 Objects.equals(email, user.email) &&
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
@@ -78,7 +75,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, firstName, lastName,  password, userid);
+        return Objects.hash(userid, email, firstName, lastName,  password, userid);
     }
 }
 

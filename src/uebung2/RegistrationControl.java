@@ -5,7 +5,7 @@ import java.util.List;
 public class RegistrationControl {
     public RegistrationResult registerUser(UserDTO user){
         User us = new User();
-        us.setId(user.getId());
+        us.setUserid(user.getUserid());
         us.setFirstName(user.getFirstName());
         us.setLastName(user.getLastName());
         us.setEmail(user.getEmail());
@@ -13,7 +13,7 @@ public class RegistrationControl {
         RegistrationResult regresult = new RegistrationResult();
 
         boolean erg = regresult.result;
-            if(us.getId() == 0) {
+            if(us.getUserid() == 0) {
             erg = false;
             }
                 else if(us.getFirstName() == null || us.getLastName() == null) {
