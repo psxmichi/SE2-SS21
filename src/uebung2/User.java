@@ -1,3 +1,6 @@
+/**
+ * @author mlehma2s
+ */
 package uebung2;
 
 // import java.sql.Date;
@@ -76,6 +79,32 @@ public class User implements UserDTO {
     @Override
     public int hashCode() {
         return Objects.hash(userid, email, firstName, lastName,  password, userid);
+    }
+
+    public int getUserid(int uid) {
+        this.userid = uid;
+        return uid;
+    }
+
+    public String getFirstName(String fn) {
+        this.firstName = fn;
+        return fn;
+    }
+
+    public String getLastName(String ln) {
+        this.lastName = ln;
+        return ln;
+    }
+
+
+    public String getEmail(String email) {
+        this.email = email;
+        return email;
+    }
+
+    public String getPassword(String pwd) {
+        this.password = pwd;
+        return pwd;
     }
 }
 

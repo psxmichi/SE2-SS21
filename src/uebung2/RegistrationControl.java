@@ -1,6 +1,7 @@
+/**
+ * @author mlehma2s
+ */
 package uebung2;
-
-import java.util.List;
 
 public class RegistrationControl {
     public RegistrationResult registerUser(UserDTO user){
@@ -13,7 +14,7 @@ public class RegistrationControl {
         RegistrationResult regresult = new RegistrationResult();
 
         boolean erg = regresult.result;
-            if(us.getUserid() == 0) {
+            if(us.getUserid(1) == 0) {
             erg = false;
             }
                 else if(us.getFirstName() == null || us.getLastName() == null) {
