@@ -1,7 +1,9 @@
 /**
  * @author mlehma2s
  */
-package uebung2;
+package uebung2.test;
+
+import uebung2.control.User;
 
 public class UserBuilder {
     int userid = 1;

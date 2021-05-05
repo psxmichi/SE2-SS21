@@ -1,9 +1,10 @@
 /**
  * @author mlehma2s
  */
-package uebung2;
+package uebung2.control;
 
 // import java.sql.Date;
+
 import java.util.Objects;
 
 public class User implements UserDTO {

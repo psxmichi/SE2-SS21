@@ -1,7 +1,9 @@
 /**
  * @author mlehma2s
  */
-package uebung2;
+package uebung2.factory;
+
+import uebung2.control.User;
 
 public class UserFactory {
     public UserFactory(){

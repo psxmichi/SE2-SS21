@@ -1,7 +1,7 @@
 /**
  * @author mlehma2s
  */
-package uebung2;
+package uebung2.control;
 
 public class RegistrationControl {
     public RegistrationResult registerUser(UserDTO user){

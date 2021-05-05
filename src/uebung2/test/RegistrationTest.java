@@ -1,10 +1,11 @@
 /**
  * @author mlehma2s
  */
-package uebung2;
+package uebung2.test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import uebung2.control.User;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
